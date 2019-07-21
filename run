@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run --restart unless-stopped -d --name cdn -p 8083:8083 -v `pwd`/files:/cdn/files crowjdh/cdn:latest http-server -a 0.0.0.0 -p 8083
+
